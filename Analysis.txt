@@ -1,0 +1,6 @@
+1. We streamed the tweets with the word "420days" and displayed the sentiment scores on kafka consumer.
+2. We observed the graph on kibana for 1 hour, 10 mins.
+3. If the average of sentiment scores over a minute is greater than 0, the spike points up.
+   If the average of sentiment scores over a minute is less than 0, the spike points down.
+   If the average of sentiment scores over a minute is 0, it implies that either there were no tweets during that period or there were equally positive and negative tweets.
+4. But mostly, the average of sentiment scores was greater than 0 which implies most of the tweets were positive.

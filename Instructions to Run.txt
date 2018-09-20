@@ -1,0 +1,12 @@
+
+1. Import the project "SparkStreamingTwitterExample" into Intellij as a Maven Project
+2. Go to View-> Tool Windows -> Maven Projects -> twitter -> Lifecycle -> package to generate twitter-1.0-jar-with-dependencies.jar in the target->maven-status folder.
+3. Start zookeeper, kafka service
+4. Create a kafka topic "test"
+5. Check if the kafka stream is working properly by sending messages on the producer and receiving the same messages on the consumer.
+6. Start logstash, elasticsearch and Kibana.
+6. Now, open the terminal in Intellij and run the following command:
+	spark-submit --class streaming.TweetProducer --master local <Path of .jar file> test 420days
+7. You can see the streaming text in the intellij console and the sentiment score in the kafka consumer.
+8. Create an indexer twitter-index on http://localhost:5601
+9. Create an Area chart with timestamp on x-axis and Average(Sentiment score) on y-axis.
